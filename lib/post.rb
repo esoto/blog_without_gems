@@ -1,4 +1,5 @@
 class Post < CSVManager
+  attr_reader :id
   attr_accessor :title, :post_body
 
   def initialize arg={}
