@@ -11,6 +11,11 @@ STester.description Routes do
       response = get("/posts")
       response.code.should be_equal "200"
     end
+
+    STester.it "have a route to show post's form" do
+      response = get("/posts/new")
+      response.code.should be_equal "200"
+    end
   end
 end
 

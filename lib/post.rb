@@ -1,4 +1,4 @@
-class Post
+class Post < CSVManager
   attr_accessor :title, :post_body
 
   def initialize arg={}
