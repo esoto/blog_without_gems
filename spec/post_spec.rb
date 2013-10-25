@@ -12,5 +12,10 @@ STester.description Post do
       post.title.should be_equal title
       post.post_body.should be_equal post_body
     end
+
+    STester.it "has an id" do
+      post = Post.new
+      post.id.should be_nil
+    end
   end
 end
