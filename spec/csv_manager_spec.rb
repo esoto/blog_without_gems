@@ -34,5 +34,14 @@ STester.description CSVManager do
         find_post.should be_nil
       end
     end
+
+    STester.context "#delete" do
+      STester.it "return the post with the request id" do
+        posts = Post.all
+        post_id = posts.first.id
+        Post.delete(post_id)
+        Post.find(post_id).should be_nil
+      end
+    end
   end
 end
