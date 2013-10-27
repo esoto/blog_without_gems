@@ -25,7 +25,7 @@ STester.description CSVManager do
       STester.it "return the post with the request id" do
         posts = Post.all
         find_post = Post.find(posts.first.id)
-        find_post.should be_equal posts.first
+        find_post.id.should be_equal posts.first.id
       end
     end
   end
