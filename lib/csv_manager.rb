@@ -15,6 +15,13 @@ class CSVManager
     end
   end
 
+  def self.find id
+    posts = read_post_file
+    posts.each do |post|
+      return set_up_posts(post) if post[0]==id
+    end
+  end
+
   def assign_id
     self.id = File.exist?("lib/posts.csv") ? (read_post_file.last[0].to_i + 1) : 1
   end
