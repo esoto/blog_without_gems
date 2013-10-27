@@ -20,5 +20,13 @@ STester.description CSVManager do
       posts = Post.all
       posts.first.id.should_not be_nil
     end
+
+    STester.context "#find" do
+      STester.it "return the post with the request id" do
+        posts = Post.all
+        find_post = Post.find(posts.first.id)
+        find_post.should be_equal posts.first
+      end
+    end
   end
 end
