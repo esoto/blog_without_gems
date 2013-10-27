@@ -27,6 +27,12 @@ STester.description CSVManager do
         find_post = Post.find(posts.first.id)
         find_post.id.should be_equal posts.first.id
       end
+
+      STester.it "return nil if the request id don't exist" do
+        posts = Post.all
+        find_post = Post.find(0)
+        find_post.should be_nil
+      end
     end
   end
 end
