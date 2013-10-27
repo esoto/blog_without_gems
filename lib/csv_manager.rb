@@ -20,6 +20,7 @@ class CSVManager
     posts.each do |post|
       return set_up_posts(post) if post[0]==id
     end
+    return nil
   end
 
   def assign_id
